@@ -36,7 +36,7 @@ const blogCategories = [
   
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
     <!-- Top Footer Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 xl:gap-12 pb-12 border-b border-slate-800">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 xl:gap-12 pb-12 border-b border-slate-800">
       
       <!-- Company Brand & Mission -->
       <div class="lg:col-span-2 space-y-5">
@@ -85,33 +85,6 @@ const blogCategories = [
         </div>
       </div>
 
-      <!-- Services Column -->
-      <div>
-        <h3 class="text-sm font-semibold tracking-wider text-white uppercase font-display mb-4">Core Services</h3>
-        <ul class="space-y-2.5">
-          {serviceLinks.map((link) => (
-            <li>
-              <a href={link.href} class="text-sm text-slate-400 hover:text-white hover:underline transition-colors">
-                {link.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <!-- Industries Column -->
-      <div>
-        <h3 class="text-sm font-semibold tracking-wider text-white uppercase font-display mb-4">Industries</h3>
-        <ul class="space-y-2.5">
-          {industryLinks.map((link) => (
-            <li>
-              <a href={link.href} class="text-sm text-slate-400 hover:text-white hover:underline transition-colors">
-                {link.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
 
       <!-- Technical Knowledge / Blog -->
       <div>
