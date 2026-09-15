@@ -1,0 +1,1 @@
+import"./hoisted.DQp2BUiF.js";const e=document.getElementById("contact-form");e&&e.addEventListener("submit",t=>{t.preventDefault(),alert("Thank you for your inquiry. A consultant will be in touch shortly."),t.target.reset()});

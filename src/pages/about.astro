@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadCaptureCTA from '../components/LeadCaptureCTA.astro';
+---
+
+<BaseLayout
+  title="About Me | D365 Mastery"
+  description="Learn about the Principal Architect behind D365 Mastery and our mission to deliver top-tier Microsoft Dynamics 365 Finance & Operations consulting."
+  breadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "About", url: "/about" }
+  ]}
+>
+  <section class="py-16 sm:py-24 bg-white border-b border-purple-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-black font-display text-[#2E1065] tracking-tight mb-6">
+        About D365 Mastery
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-10">
+        Hi, I'm Manu Sharma, a Principal Technical Architect with deep roots in Microsoft Dynamics 365 Finance &amp; Operations. I founded D365 Mastery to bridge the gap between business requirements and scalable, performant ERP architecture.
+      </p>
+      
+      <div class="flex items-center justify-center gap-6">
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="text-[#6D28D9] hover:text-[#4C1D95] font-semibold flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-purple prose-lg">
+      <h2 class="text-2xl font-bold text-[#2E1065] mb-4">My Philosophy</h2>
+      <p class="text-slate-600 mb-6">
+        I believe that a successful Dynamics 365 implementation is not just about writing code; it's about understanding the core business processes. A poor architectural decision on day one can cost millions in performance tuning and technical debt down the road.
+      </p>
+      
+      <h2 class="text-2xl font-bold text-[#2E1065] mb-4">Why D365 Mastery?</h2>
+      <ul class="list-disc pl-5 space-y-2 text-slate-600 mb-8">
+        <li><strong>No Junior Devs:</strong> We don't bait-and-switch. You work directly with Senior Architects.</li>
+        <li><strong>Performance First:</strong> Every customization is reviewed for SQL deadlocks, batch bottlenecks, and overall system health.</li>
+        <li><strong>Standard Over Custom:</strong> We push back on unnecessary customizations, leveraging ISVs and standard features to keep you in the "One Version" track.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="pb-24 pt-8 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <LeadCaptureCTA
+        headline="Need a Senior Architect on your team?"
+        subheadline="Let's ensure your D365 F&O project succeeds with a robust architectural foundation."
+        primaryCtaText="Contact Us Today"
+        primaryCtaLink="/contact"
+      />
+    </div>
+  </section>
+</BaseLayout>

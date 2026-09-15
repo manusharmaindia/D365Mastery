@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const sortedPosts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// 1. Calculate Labels (tags with counts)
+const labelCounts: Record<string, number> = {};
+sortedPosts.forEach(post => {
+  if (post.data.category) {
+    labelCounts[post.data.category] = (labelCounts[post.data.category] || 0) + 1;
+  }
+  post.data.tags.forEach((tag: string) => {
+    labelCounts[tag] = (labelCounts[tag] || 0) + 1;
+  });
+});
+const sortedLabels = Object.entries(labelCounts).sort((a, b) => b[1] - a[1]);
+
+// 2. Calculate Archives (Year -> Month -> Posts)
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const archives: Record<string, { count: number, months: Record<string, { count: number, posts: any[] }> }> = {};
+
+sortedPosts.forEach(post => {
+  const date = post.data.pubDate;
+  const year = date.getFullYear().toString();
+  const month = monthNames[date.getMonth()];
+  
+  if (!archives[year]) archives[year] = { count: 0, months: {} };
+  archives[year].count++;
+  
+  if (!archives[year].months[month]) archives[year].months[month] = { count: 0, posts: [] };
+  archives[year].months[month].count++;
+  archives[year].months[month].posts.push(post);
+});
+
+// Sort years descending
+const sortedYears = Object.keys(archives).sort((a, b) => parseInt(b) - parseInt(a));
+---
+
+<BaseLayout
+  title="Blog | D365 Mastery — Dynamics 365 F&O Technical Guides"
+  description="In-depth technical guides on Microsoft Dynamics 365 Finance & Operations."
+  breadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" }
+  ]}
+>
+  <section class="bg-white pt-12 pb-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-10">
+        <h1 class="text-3xl sm:text-4xl font-black font-display tracking-tight text-[#2E1065] mb-3">
+          Blog
+        </h1>
+        <p class="text-base text-slate-500 leading-relaxed max-w-xl">
+          Technical deep-dives and step-by-step guides on Dynamics 365 Finance &amp; Operations.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12 items-start">
+        
+        <!-- MAIN CONTENT (Left Column) -->
+        <div class="min-w-0">
+          
+          <div id="posts-grid" class="space-y-8">
+            {sortedPosts.map((post) => (
+              <div class="post-item" data-title={post.data.title.toLowerCase()} data-desc={post.data.description.toLowerCase()}>
+                <BlogCard
+                  title={post.data.title}
+                  description={post.data.description}
+                  slug={post.slug}
+                  pubDate={post.data.pubDate}
+                  category={post.data.category}
+                  readingTime={post.data.readingTime}
+                  tags={post.data.tags}
+                  featured={post.data.featured}
+                />
+              </div>
+            ))}
+          </div>
+
+          <div id="no-posts" class="hidden text-center py-16 border-2 border-dashed border-purple-100 rounded-xl mt-8">
+            <p class="text-slate-400 text-sm">No articles match your search.</p>
+          </div>
+
+        </div>
+
+        <!-- SIDEBAR (Right Column) -->
+        <aside class="space-y-10 sticky top-24">
+          
+          <!-- Search -->
+          <div>
+            <div class="relative">
+              <input 
+                type="text" 
+                id="blog-search"
+                placeholder="Search this blog" 
+                class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#6D28D9] focus:border-transparent outline-none transition-all text-sm placeholder:text-slate-400"
+              />
+              <svg class="absolute left-3.5 top-3 w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Post Archive -->
+          <div>
+            <h3 class="text-[13px] font-bold uppercase tracking-wider text-[#2E1065] mb-4 pb-2 border-b border-purple-100">
+              Post Archive
+            </h3>
+            <ul class="space-y-2 text-sm text-slate-600">
+              {sortedYears.map((year) => (
+                <li class="pt-1">
+                  <details class="group">
+                    <summary class="cursor-pointer font-semibold text-slate-800 hover:text-[#6D28D9] list-none flex items-center gap-2">
+                      <svg class="w-3.5 h-3.5 transition-transform group-open:rotate-90 text-purple-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                      {year} ({archives[year].count})
+                    </summary>
+                    <ul class="pl-6 mt-2 border-l border-purple-50 ml-1.5 space-y-2">
+                      {Object.keys(archives[year].months).map((month) => (
+                        <li>
+                          <details class="group/month">
+                            <summary class="cursor-pointer text-slate-600 hover:text-[#6D28D9] list-none flex items-center gap-2">
+                              <svg class="w-3 h-3 transition-transform group-open/month:rotate-90 text-purple-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                              </svg>
+                              {month} ({archives[year].months[month].count})
+                            </summary>
+                            <ul class="pl-5 mt-2 space-y-3 mb-2">
+                              {archives[year].months[month].posts.map((post) => (
+                                <li class="text-[13px] leading-tight flex items-start gap-2">
+                                  <div class="w-1 h-1 rounded-full bg-[#6D28D9] mt-1.5 flex-shrink-0"></div>
+                                  <a href={`/blog/${post.slug}`} class="text-slate-500 hover:text-[#6D28D9] transition-colors">
+                                    {post.data.title}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </details>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Labels / Categories -->
+          <div>
+            <h3 class="text-[13px] font-bold uppercase tracking-wider text-[#2E1065] mb-4 pb-2 border-b border-purple-100">
+              Labels
+            </h3>
+            <ul class="space-y-2.5">
+              {sortedLabels.map(([label, count]) => (
+                <li class="flex items-center gap-2 text-sm text-slate-600 hover:text-[#6D28D9] transition-colors">
+                  <div class="w-1.5 h-1.5 rounded-full bg-purple-200"></div>
+                  <span class="flex-grow cursor-pointer" onclick={`document.getElementById('blog-search').value='${label}'; document.getElementById('blog-search').dispatchEvent(new Event('input'))`}>
+                    {label}
+                  </span>
+                  <span class="text-xs text-slate-400 bg-slate-50 px-2 py-0.5 rounded-full border border-slate-100">
+                    {count}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Client-side search filtering
+  const searchInput = document.getElementById('blog-search') as HTMLInputElement;
+  const postItems = document.querySelectorAll('.post-item') as NodeListOf<HTMLElement>;
+  const noPosts = document.getElementById('no-posts');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const searchTerm = (e.target as HTMLInputElement).value.toLowerCase();
+      let visibleCount = 0;
+
+      postItems.forEach((item) => {
+        const title = item.getAttribute('data-title') || '';
+        const desc = item.getAttribute('data-desc') || '';
+        
+        if (title.includes(searchTerm) || desc.includes(searchTerm) || searchTerm === '') {
+          item.style.display = 'block';
+          visibleCount++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      if (noPosts) {
+        noPosts.classList.toggle('hidden', visibleCount > 0);
+      }
+    });
+  }
+</script>

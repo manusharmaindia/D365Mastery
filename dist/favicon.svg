@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <!-- Deep Violet to Bright Purple Gradient for D base -->
+    <linearGradient id="fav-grad-d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4C1D95"/>
+      <stop offset="50%" stop-color="#6D28D9"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+
+    <!-- Inner Ribbon Loop Gradient -->
+    <linearGradient id="fav-grad-ribbon" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6D28D9"/>
+      <stop offset="50%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+
+    <!-- Right M Arch Gradient -->
+    <linearGradient id="fav-grad-m" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="60%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#E9D5FF"/>
+    </linearGradient>
+
+    <filter id="fav-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#2E1065" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Rounded Square Base -->
+  <rect width="120" height="120" rx="28" fill="#FFFFFF"/>
+  <rect width="120" height="120" rx="28" stroke="#F3E8FF" stroke-width="2"/>
+
+  <!-- Scaled DM Ribbon Glyph -->
+  <g transform="translate(10, 8) scale(0.28)" filter="url(#fav-shadow)">
+    <!-- Left 'D' Back Arch -->
+    <path d="M70 40 H160 C245 40 290 90 290 180 C290 270 240 320 155 320 H70 V40 Z" fill="url(#fav-grad-d)"/>
+
+    <!-- 'D' Inner Counter Cutout -->
+    <path d="M135 105 H155 C200 105 225 135 225 180 C225 225 195 255 150 255 H135 V105 Z" fill="#2E1065" opacity="0.35"/>
+
+    <!-- 3D Twisting Ribbon through center -->
+    <path d="M140 260 C170 260 210 230 240 185 C270 140 290 95 335 95 C380 95 400 135 385 185 C370 235 330 265 290 265 C245 265 210 225 210 180 C210 135 240 95 275 95" 
+          stroke="url(#fav-grad-ribbon)" stroke-width="65" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- Right M Arch Flow -->
+    <path d="M320 110 C350 60 410 45 445 90 C475 125 480 185 480 275 C480 295 465 320 445 320 C420 320 405 295 405 270 C405 200 400 135 370 135 C340 135 320 185 315 230" 
+          stroke="url(#fav-grad-m)" stroke-width="68" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

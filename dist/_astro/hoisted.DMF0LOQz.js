@@ -1,0 +1,1 @@
+import"./hoisted.DQp2BUiF.js";const t=document.getElementById("share-button");t&&t.addEventListener("click",()=>{navigator.share?navigator.share({title:document.title,url:window.location.href}).catch(()=>{}):(navigator.clipboard.writeText(window.location.href),alert("Link copied to clipboard!"))});

@@ -1,0 +1,44 @@
+---
+export interface Props {
+  headline: string;
+  subheadline: string;
+  primaryCtaText: string;
+  primaryCtaLink: string;
+}
+
+const {
+  headline,
+  subheadline,
+  primaryCtaText,
+  primaryCtaLink,
+} = Astro.props;
+---
+
+<section class="my-16 bg-gradient-to-br from-[#6D28D9] to-[#4C1D95] rounded-3xl p-8 sm:p-12 md:p-16 text-center shadow-lg relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+    <svg class="absolute w-96 h-96 -top-24 -left-24 text-white" viewBox="0 0 100 100" fill="currentColor">
+      <circle cx="50" cy="50" r="50" />
+    </svg>
+    <svg class="absolute w-96 h-96 -bottom-24 -right-24 text-white" viewBox="0 0 100 100" fill="currentColor">
+      <circle cx="50" cy="50" r="50" />
+    </svg>
+  </div>
+  
+  <div class="relative z-10 max-w-3xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-black font-display text-white tracking-tight mb-4">
+      {headline}
+    </h2>
+    <p class="text-sm sm:text-base text-purple-100 mb-8 leading-relaxed max-w-2xl mx-auto">
+      {subheadline}
+    </p>
+    <a
+      href={primaryCtaLink}
+      class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl text-sm sm:text-base font-bold text-[#6D28D9] bg-white hover:bg-purple-50 active:bg-purple-100 shadow-md shadow-black/10 transition-all duration-200 transform hover:-translate-y-0.5"
+    >
+      <span>{primaryCtaText}</span>
+      <svg class="w-5 h-5 stroke-[2]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </a>
+  </div>
+</section>

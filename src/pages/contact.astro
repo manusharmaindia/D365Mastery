@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<BaseLayout
+  title="Contact | D365 Mastery"
+  description="Get in touch with D365 Mastery for expert Microsoft Dynamics 365 Finance & Operations consulting, architecture reviews, and performance tuning."
+  breadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "Contact", url: "/contact" }
+  ]}
+>
+  <section class="py-16 sm:py-24 bg-white relative overflow-hidden">
+    <!-- Decorative background blobs -->
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-[#F3E8FF] opacity-50 blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-purple-50 opacity-50 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        
+        <!-- Left Side: Copy -->
+        <div>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-black font-display text-[#2E1065] tracking-tight mb-6">
+            Let's Talk About Your D365 F&amp;O Challenges
+          </h1>
+          <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+            Whether you need a full greenfield implementation team, an architectural health check, or expert X++ developers to optimize your system, we are here to help.
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900">Email Us</h4>
+                <p class="text-sm text-slate-500">manu@d365mastery.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900">Location</h4>
+                <p class="text-sm text-slate-500">India (Serving Global Enterprise Clients)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="relative">
+          <ContactForm />
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

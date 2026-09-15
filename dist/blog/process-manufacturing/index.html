@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="en" class="h-full scroll-smooth"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://d365mastery.com/blog/process-manufacturing"><!-- Primary Meta Tags --><title>Process Manufacturing | D365 Mastery</title><meta name="title" content="Process Manufacturing | D365 Mastery"><meta name="description" content="Advanced Process Manufacturing: The Semi-Finished Good (SFG) Scenario In complex food manufacturing, products are rarely made in a single, uninterrupted st..."><meta name="keywords" content="Process Manufacturing, Formulas, Routes, SFG, Batch Orders"><meta name="author" content="Manu Sharma"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><!-- Open Graph / Facebook / LinkedIn --><meta property="og:type" content="article"><meta property="og:url" content="https://d365mastery.com/blog/process-manufacturing"><meta property="og:title" content="Process Manufacturing | D365 Mastery"><meta property="og:description" content="Advanced Process Manufacturing: The Semi-Finished Good (SFG) Scenario In complex food manufacturing, products are rarely made in a single, uninterrupted st..."><meta property="og:image" content="https://d365mastery.com/images/og-image.png"><meta property="og:site_name" content="D365 Mastery"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2026-04-05T00:00:00.000Z"><!-- Twitter Cards --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://d365mastery.com/blog/process-manufacturing"><meta name="twitter:title" content="Process Manufacturing | D365 Mastery"><meta name="twitter:description" content="Advanced Process Manufacturing: The Semi-Finished Good (SFG) Scenario In complex food manufacturing, products are rarely made in a single, uninterrupted st..."><meta name="twitter:image" content="https://d365mastery.com/images/og-image.png"><!-- Structured Data (JSON-LD) --><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://d365mastery.com/#organization","name":"D365 Mastery","url":"https://d365mastery.com","logo":"https://d365mastery.com/images/d365-mastery-logo.png","image":"https://d365mastery.com/images/og-image.png","description":"Enterprise Microsoft Dynamics 365 Finance & Operations consulting, implementation, solution architecture, X++ engineering, performance optimization, and managed support.","address":{"@type":"PostalAddress","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":"12.9716","longitude":"77.5946"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"20:00"},"priceRange":"$$$$","sameAs":["https://www.linkedin.com/company/d365mastery"],"contactPoint":{"@type":"ContactPoint","contactType":"Customer Support","email":"contact@d365mastery.com","areaServed":["US","EU","GB","IN","AU","AE"],"availableLanguage":["English"]}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://d365mastery.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://d365mastery.com/blog"},{"@type":"ListItem","position":3,"name":"Process Manufacturing","item":"https://d365mastery.com/blog/process-manufacturing"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://d365mastery.com/blog/process-manufacturing"},"headline":"Process Manufacturing | D365 Mastery","description":"Advanced Process Manufacturing: The Semi-Finished Good (SFG) Scenario In complex food manufacturing, products are rarely made in a single, uninterrupted st...","image":"https://d365mastery.com/images/og-image.png","author":{"@type":"Person","name":"Manu Sharma","jobTitle":"Principal D365 F&O Solution Architect","worksFor":{"@type":"Organization","name":"D365 Mastery"}},"publisher":{"@type":"Organization","name":"D365 Mastery","logo":{"@type":"ImageObject","url":"https://d365mastery.com/images/d365-mastery-logo.png"}},"datePublished":"2026-04-05T00:00:00.000Z","dateModified":"2026-04-05T00:00:00.000Z"}</script><style>.article-content{font-size:1rem;line-height:1.8;color:#334155}.article-content p{margin-top:1rem;margin-bottom:1.25rem;line-height:1.8}.article-content strong,.article-content b{color:#2e1065;font-weight:600}.article-content h1{font-size:1.65rem;font-weight:800;color:#2e1065;margin-top:2.5rem;margin-bottom:1rem;line-height:1.3;letter-spacing:-.02em}.article-content h2{font-size:1.35rem;font-weight:700;color:#4c1d95;margin-top:2.5rem;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid #E9D5FF;line-height:1.35}.article-content h3{font-size:1.1rem;font-weight:700;color:#2e1065;margin-top:2rem;margin-bottom:.75rem}.article-content hr{border:0;border-top:1px solid #F3E8FF;margin:2rem 0}.article-content ul,.article-content ol{margin:1rem 0;padding-left:1.25rem}.article-content ul{list-style-type:disc}.article-content ol{list-style-type:decimal}.article-content li{margin-bottom:.4rem;line-height:1.7}.article-content li::marker{color:#a855f7}.article-content table{width:100%!important;display:table!important;border-collapse:collapse!important;border-spacing:0!important;margin-top:1.5rem!important;margin-bottom:2rem!important;border:1px solid #E9D5FF!important;border-radius:.375rem!important;overflow:hidden!important;font-size:.875rem!important}.article-content thead{border-bottom:1px solid #E9D5FF!important}.article-content th{background-color:#faf5ff!important;color:#4c1d95!important;font-weight:600!important;font-size:.8125rem!important;padding:.75rem 1rem!important;border:1px solid #E9D5FF!important;text-align:left!important;vertical-align:middle!important}.article-content td{padding:.75rem 1rem!important;border:1px solid #F3E8FF!important;color:#334155!important;font-size:.875rem!important;line-height:1.6!important;vertical-align:middle!important}.article-content tbody tr:nth-child(2n) td{background-color:#fdfaff!important}.article-content tbody tr:hover td{background-color:#faf5ff!important}.article-content img{border-radius:.5rem;margin:1.5rem 0;border:1px solid #F3E8FF;max-width:100%;height:auto}.article-content a{color:#6d28d9;text-decoration:underline;text-decoration-color:#6d28d94d;text-underline-offset:2px;transition:text-decoration-color .15s}.article-content a:hover{text-decoration-color:#6d28d9}.article-content blockquote{border-left:3px solid #E9D5FF;padding-left:1rem;margin:1.5rem 0;color:#64748b;font-style:italic}.article-content code{font-family:JetBrains Mono,monospace;font-size:.85em;background-color:#faf5ff;padding:.15rem .35rem;border-radius:.25rem;border:1px solid #F3E8FF;color:#6d28d9}.article-content pre code{background:none;padding:0;border:none;border-radius:0;color:inherit}
+</style>
+<link rel="stylesheet" href="/_astro/about.C_Sv08y3.css"><script type="module" src="/_astro/hoisted.DMF0LOQz.js"></script></head> <body class="min-h-full flex flex-col bg-white text-slate-900 font-sans antialiased selection:bg-primary selection:text-white"> <header class="sticky top-0 z-50 w-full bg-[#6D28D9] border-b border-[#4C1D95]/80 shadow-md transition-all duration-150"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex items-center justify-between h-14 md:h-16"> <!-- Brand Logo / Title --> <a href="/" class="flex items-center gap-2.5 group focus:outline-none" aria-label="D365Mastery"> <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white p-1 shadow-xs border border-white/20 flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden"> <img src="/images/d365mastery-logo.png" alt="D365Mastery Logo" class="w-full h-full object-contain"> </div> <div class="flex flex-col"> <span class="text-lg sm:text-2xl font-black font-display tracking-tight text-white group-hover:text-purple-100 transition-colors leading-none">
+D365Mastery
+</span> <span class="text-[9px] uppercase tracking-wider font-bold text-white/80 leading-tight">
+Dynamics 365 F&amp;O
+</span> </div> </a> <!-- Desktop Navigation Links --> <nav class="hidden lg:flex items-center gap-5 xl:gap-6 text-xs sm:text-[13px] font-medium text-white" aria-label="Main Navigation"> <a href="/about" class="hover:text-purple-200 hover:underline underline-offset-4 decoration-2 transition-all text-white/80"> About me </a><a href="/services" class="hover:text-purple-200 hover:underline underline-offset-4 decoration-2 transition-all text-white/80"> Services </a><a href="/industries" class="hover:text-purple-200 hover:underline underline-offset-4 decoration-2 transition-all text-white/80"> Industries </a><a href="/blog" class="hover:text-purple-200 hover:underline underline-offset-4 decoration-2 transition-all font-bold underline text-white"> Blog </a><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-purple-200 hover:underline underline-offset-4 decoration-2 transition-all text-white/80"> GitHub </a><a href="https://www.linkedin.com/company/d365mastery" target="_blank" rel="noopener noreferrer" class="hover:text-purple-200 hover:underline underline-offset-4 decoration-2 transition-all text-white/80"> LinkedIn </a><a href="/contact?ref=courses" class="hover:text-purple-200 hover:underline underline-offset-4 decoration-2 transition-all text-white/80"> Udemy Courses </a><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="hover:text-purple-200 hover:underline underline-offset-4 decoration-2 transition-all text-white/80"> YouTube </a> <!-- Search Icon Button --> <a href="/blog" class="p-1 text-white/90 hover:text-white hover:scale-110 transition-transform focus:outline-none" aria-label="Search articles" title="Search articles"> <svg class="w-4 h-4 stroke-[2.2]" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path> </svg> </a> <!-- Schedule Consultation Button --> <a href="/contact" class="hidden lg:inline-flex items-center justify-center px-4 py-2 text-[11px] font-bold tracking-widest uppercase text-[#6D28D9] bg-white rounded-lg hover:bg-purple-50 transition-colors shadow-sm focus:outline-none"> <span>Consultation</span> </a> </nav> <!-- Mobile Hamburger Button --> <div class="flex lg:hidden items-center gap-2"> <a href="/blog" class="p-1.5 text-white/90 hover:text-white" aria-label="Search"> <svg class="w-5 h-5 stroke-[2.2]" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path> </svg> </a> <button type="button" id="mobile-menu-button" class="p-1.5 rounded-lg text-white hover:bg-white/10 focus:outline-none" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobile-menu"> <svg id="hamburger-icon" class="w-6 h-6 stroke-[2.2]" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path> </svg> <svg id="close-icon" class="w-6 h-6 stroke-[2.2] hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path> </svg> </button> </div> </div> </div> <!-- Mobile Drawer Menu --> <div id="mobile-menu" class="hidden lg:hidden border-t border-[#4C1D95] bg-[#6D28D9] px-4 pt-2 pb-5 shadow-lg"> <div class="flex flex-col space-y-2 text-sm font-medium text-white"> <a href="/about" class="py-1.5 px-2 rounded hover:bg-white/10 transition-colors"> About me </a><a href="/services" class="py-1.5 px-2 rounded hover:bg-white/10 transition-colors"> Services </a><a href="/industries" class="py-1.5 px-2 rounded hover:bg-white/10 transition-colors"> Industries </a><a href="/blog" class="py-1.5 px-2 rounded hover:bg-white/10 transition-colors"> Blog </a><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="py-1.5 px-2 rounded hover:bg-white/10 transition-colors"> GitHub </a><a href="https://www.linkedin.com/company/d365mastery" target="_blank" rel="noopener noreferrer" class="py-1.5 px-2 rounded hover:bg-white/10 transition-colors"> LinkedIn </a><a href="/contact?ref=courses" class="py-1.5 px-2 rounded hover:bg-white/10 transition-colors"> Udemy Courses </a><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="py-1.5 px-2 rounded hover:bg-white/10 transition-colors"> YouTube </a> <div class="pt-2 border-t border-white/10"> <a href="/contact" class="flex items-center justify-center w-full px-4 py-2.5 rounded-lg text-xs font-bold text-[#6D28D9] bg-white hover:bg-purple-50 transition-all text-center">
+Schedule Consultation
+</a> </div> </div> </div> </header>  <main class="flex-grow">  <article class="bg-white pt-12 sm:pt-16 pb-24"> <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8"> <!-- Back to Blog --> <a href="/blog" class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-400 hover:text-[#6D28D9] transition-colors mb-8 group"> <svg class="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path> </svg>
+Back to Blog
+</a> <!-- Category --> <div class="mb-4"> <span class="text-[11px] font-semibold uppercase tracking-widest text-[#7C3AED]"> Process Manufacturing </span> </div> <!-- Title --> <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black font-display text-[#2E1065] tracking-tight leading-tight mb-5"> Process Manufacturing </h1> <!-- Author & Date --> <div class="flex items-center gap-3 pb-8 mb-8 border-b border-purple-100/50"> <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#6D28D9] to-[#A855F7] flex items-center justify-center text-white text-xs font-bold flex-shrink-0"> MS </div> <div class="text-sm"> <span class="font-semibold text-slate-900">Manu Sharma</span> <span class="text-purple-200 mx-1.5">·</span> <time datetime="2026-04-05T00:00:00.000Z" class="text-slate-400"> April 5, 2026 </time> <span class="text-purple-200 mx-1.5">·</span> <span class="text-slate-400">4 min read</span> </div> </div> <!-- Article Content --> <div class="article-content"> <p>In complex food manufacturing, products are rarely made in a single, uninterrupted step. Instead, production is broken down into intermediate stages using <strong>Semi-Finished Goods (SFGs)</strong>. This allows a business to accurately track the cost, yield, and inventory of intermediate items—like dough or bulk sauces—before they are consumed into the final retail packaging.</p>
+  <p>In Dynamics 365 Finance &#x26; Operations, this multi-level approach requires <strong>two Formulas</strong> and <strong>two Routes</strong>. Let's walk through a complete end-to-end scenario for producing 50,000 packets of Frozen Paneer Momos, culminating in the exact $49,901.50 final ledger voucher we analyzed earlier.</p>
+  <hr>
+  <h2>PHASE 1: SFG Production (Momo Dough)</h2>
+  <p><strong>The Scenario:</strong> Before we can assemble the momos, the kitchen staff must prepare the dough in bulk. We are initiating a Batch Order to produce <strong>5,750 kg of Momo Dough</strong>, which is exactly the amount required to satisfy our final order of 50,000 momo packets.</p>
+  <p><strong>Financial Impact:</strong> When this batch is started, the system debits WIP for the flour and water. As the industrial mixers run, labor and overhead costs are "absorbed" into WIP. When this first batch order is <strong>Ended</strong>, the total accumulated cost ($2,600.00) is credited out of WIP and debited into our SFG Inventory account. The dough now sits in our warehouse with a standard cost of $0.4521 per kg, ready to be used.</p>
+  <p><strong>Item:</strong> SFG-DGH-01 | <strong>Batch Size:</strong> 5,750 kg</p>
+  <h3>1. SFG Formula (Ingredients)</h3>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Item Number</th>
+          <th>Product Name</th>
+          <th>UoM</th>
+          <th>Cost Group</th>
+          <th>Qty (Per 1 kg)</th>
+          <th>Cost</th>
+          <th>Qty (5,750 kg)</th>
+          <th>Total Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>RM-FLR-01</td>
+          <td>All-purpose Flour (Maida)</td>
+          <td>kg</td>
+          <td>RM-ING</td>
+          <td>0.6956</td>
+          <td>$0.50</td>
+          <td>4,000</td>
+          <td>$2,000.00</td>
+        </tr>
+        <tr>
+          <td>RM-WAT-01</td>
+          <td>Purified Water</td>
+          <td>ltr</td>
+          <td>RM-ING</td>
+          <td>0.3044</td>
+          <td>$0.20</td>
+          <td>1,750</td>
+          <td>$350.00</td>
+        </tr>
+        <tr>
+          <td colspan="7">SFG MATERIAL TOTAL</td>
+          <td>$2,350.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>2. SFG Operations &#x26; Overheads</h3>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Operation / Desc</th>
+          <th>Cost Group</th>
+          <th>Rate / Basis</th>
+          <th>Total Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Labor</td>
+          <td>Dough Mixing (3 hrs)</td>
+          <td>OP-MIX</td>
+          <td>$40.00 / hr</td>
+          <td>$120.00</td>
+        </tr>
+        <tr>
+          <td>Overhead</td>
+          <td>Electricity (Mixer)</td>
+          <td>OVH-ELE</td>
+          <td>Unit Based</td>
+          <td>$30.00</td>
+        </tr>
+        <tr>
+          <td>Overhead</td>
+          <td>Machine Depreciation</td>
+          <td>OVH-DEP</td>
+          <td>Unit Based</td>
+          <td>$100.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <td>SFG Standard Cost Per kg</td>
+          <td>$0.4521</td>
+        </tr>
+        <tr>
+          <td>SFG Total Transferred to Inventory</td>
+          <td>$2,600.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <hr>
+  <h2>PHASE 2: FG Production (Frozen Paneer Momo)</h2>
+  <p><strong>The Scenario:</strong> With the dough prepared, we now initiate the primary Batch Order for <strong>50,000 packets of Frozen Paneer Momos</strong>. This is where the multi-level magic happens.</p>
+  <p><strong>Financial Impact:</strong> The very first item on our Picking List is the SFG Dough we just made. D365 pulls this dough out of inventory at its calculated value ($2,600), bringing all its embedded material and labor costs directly into Phase 2. We then pick the expensive paneer filling, spices, and packaging. Once the final momos roll off the assembly line and the order is Ended, the system calculates the grand total. The voucher (PCV-14187) successfully posts an actual inventory asset value of exactly $49,901.50.</p>
+  <p><strong>Item:</strong> FG-MOM-01 | <strong>Batch Size:</strong> 50,000 Packets</p>
+  <h3>1. FG Formula (Consuming the SFG)</h3>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Item Number</th>
+          <th>Product Name</th>
+          <th>UoM</th>
+          <th>Cost Group</th>
+          <th>Qty (Per Pkt)</th>
+          <th>Cost</th>
+          <th>Qty (50k Pkts)</th>
+          <th>Total Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>SFG-DGH-01</strong></td>
+          <td><strong>Momo Dough (From Phase 1)</strong></td>
+          <td>kg</td>
+          <td>SFG-MAT</td>
+          <td>0.115</td>
+          <td>$0.4521</td>
+          <td>5,750</td>
+          <td><strong>$2,600.00</strong></td>
+        </tr>
+        <tr>
+          <td>RM-PNR-01</td>
+          <td>Fresh Paneer (Diced)</td>
+          <td>kg</td>
+          <td>RM-ING</td>
+          <td>0.110</td>
+          <td>$6.90</td>
+          <td>5,500</td>
+          <td>$37,950.00</td>
+        </tr>
+        <tr>
+          <td>RM-VEG-01</td>
+          <td>Chopped Veggies/Onions</td>
+          <td>kg</td>
+          <td>RM-ING</td>
+          <td>0.030</td>
+          <td>$3.40</td>
+          <td>1,500</td>
+          <td>$5,100.00</td>
+        </tr>
+        <tr>
+          <td>RM-SPC-01</td>
+          <td>Momo Spices/Seasoning</td>
+          <td>kg</td>
+          <td>RM-ING</td>
+          <td>0.015</td>
+          <td>$3.46</td>
+          <td>750</td>
+          <td>$2,600.00</td>
+        </tr>
+        <tr>
+          <td>PM-BAG-01</td>
+          <td>Printed Food Pouch</td>
+          <td>ea</td>
+          <td>PM-PKG</td>
+          <td>1.000</td>
+          <td>$0.02</td>
+          <td>50,000</td>
+          <td>$1,000.00</td>
+        </tr>
+        <tr>
+          <td colspan="7">FG MATERIAL TOTAL (Including SFG value)</td>
+          <td>$49,250.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>2. FG Operations &#x26; Overheads</h3>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Operation / Desc</th>
+          <th>Cost Group</th>
+          <th>Rate / Basis</th>
+          <th>Total Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Labor</td>
+          <td>Assembly (7 hrs)</td>
+          <td>OP-ASS</td>
+          <td>$40.00 / hr</td>
+          <td>$280.00</td>
+        </tr>
+        <tr>
+          <td>Labor</td>
+          <td>Packaging (5 hrs)</td>
+          <td>OP-PCK</td>
+          <td>$20.00 / hr</td>
+          <td>$100.00</td>
+        </tr>
+        <tr>
+          <td>Overhead</td>
+          <td>Electricity (Line)</td>
+          <td>OVH-ELE</td>
+          <td>Unit Based</td>
+          <td>$70.00</td>
+        </tr>
+        <tr>
+          <td>Overhead</td>
+          <td>Machine Depreciation</td>
+          <td>OVH-DEP</td>
+          <td>Unit Based</td>
+          <td>$201.50</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>Final Cost Summary (Ledger Voucher Match)</h3>
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <td>Total Rolled-up Cost Per Unit (1 Packet)</td>
+          <td>$0.99803</td>
+        </tr>
+        <tr>
+          <td>Total Batch Actual Cost (Voucher PCV-14187)</td>
+          <td>$49,901.50</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ </div> <!-- Tags --> <div class="mt-12 pt-6 border-t border-purple-100/50 flex flex-wrap items-center gap-2"> <span class="text-[11px] font-medium text-[#6D28D9] bg-[#F3E8FF] px-2.5 py-1 rounded-full border border-purple-100"> Process Manufacturing </span><span class="text-[11px] font-medium text-[#6D28D9] bg-[#F3E8FF] px-2.5 py-1 rounded-full border border-purple-100"> Formulas </span><span class="text-[11px] font-medium text-[#6D28D9] bg-[#F3E8FF] px-2.5 py-1 rounded-full border border-purple-100"> Routes </span><span class="text-[11px] font-medium text-[#6D28D9] bg-[#F3E8FF] px-2.5 py-1 rounded-full border border-purple-100"> SFG </span><span class="text-[11px] font-medium text-[#6D28D9] bg-[#F3E8FF] px-2.5 py-1 rounded-full border border-purple-100"> Batch Orders </span> </div> <!-- Related Articles -->  <!-- Minimal CTA --> <div class="mt-16 p-8 rounded-xl bg-gradient-to-br from-[#F3E8FF] to-white border border-purple-100 text-center"> <p class="text-sm font-semibold text-[#2E1065] mb-1">Need expert D365 F&amp;O guidance?</p> <p class="text-xs text-slate-500 mb-4">We help enterprises architect, implement, and optimize Dynamics 365.</p> <a href="/contact" class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#6D28D9] text-white text-sm font-semibold rounded-lg hover:bg-[#7C3AED] transition-colors">
+Book a Consultation
+</a> </div> </div> </article>  </main> <footer class="bg-secondary text-slate-300 border-t border-slate-800" aria-labelledby="footer-heading"> <h2 id="footer-heading" class="sr-only">Footer</h2> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12"> <!-- Top Footer Grid --> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 xl:gap-12 pb-12 border-b border-slate-800"> <!-- Company Brand & Mission --> <div class="lg:col-span-2 space-y-5"> <a href="/" class="flex items-center gap-3"> <div class="w-11 h-11 rounded-xl bg-white p-1 shadow-md border border-slate-700 flex items-center justify-center overflow-hidden"> <img src="/images/d365mastery-logo.png" alt="D365Mastery Logo" class="w-full h-full object-contain"> </div> <div> <span class="text-xl font-bold font-display tracking-tight text-white">D365Mastery</span> <span class="text-xs text-slate-400 block">Dynamics 365 F&amp;O Consulting</span> </div> </a> <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+Elite Microsoft Dynamics 365 Finance &amp; Operations consulting startup. We help enterprise organizations implement, architect, optimize, integrate, and scale mission-critical ERP platforms with zero fluff and proven engineering excellence.
+</p> <!-- Location & Global Reach Badge --> <div class="flex items-center gap-2 text-xs text-slate-300 bg-slate-800/80 px-3.5 py-2 rounded-lg border border-slate-700/60 max-w-fit"> <svg class="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path> </svg> <span>India Headquarters • Global Reach (US, EMEA, APAC)</span> </div> <!-- Social Connections --> <div class="flex items-center gap-4 pt-1"> <a href="https://www.linkedin.com/company/d365mastery" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-white bg-slate-800 hover:bg-[#0077b5] px-3 py-2 rounded-lg transition-colors border border-slate-700" aria-label="Connect on LinkedIn"> <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"> <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6c0-.88-.72-1.6-1.6-1.6z"></path> </svg> <span>Follow on LinkedIn</span> </a> <a href="mailto:contact@d365mastery.com" class="text-xs font-medium text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 px-3 py-2 rounded-lg transition-colors border border-slate-700">
+contact@d365mastery.com
+</a> </div> </div> <!-- Services Column --> <div> <h3 class="text-sm font-semibold tracking-wider text-white uppercase font-display mb-4">Core Services</h3> <ul class="space-y-2.5"> <li> <a href="/services#implementation" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> D365 F&amp;O Implementation </a> </li><li> <a href="/services#architecture" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> Solution Architecture </a> </li><li> <a href="/services#development" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> X++ Development </a> </li><li> <a href="/services#migration" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> Data Migration &amp; DMF </a> </li><li> <a href="/services#integrations" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> Enterprise Integrations </a> </li><li> <a href="/services#optimization" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> Performance Optimization </a> </li><li> <a href="/services#support" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> Production Support (L2/L3) </a> </li><li> <a href="/services#health-check" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> ERP Health Check Audit </a> </li> </ul> </div> <!-- Industries Column --> <div> <h3 class="text-sm font-semibold tracking-wider text-white uppercase font-display mb-4">Industries</h3> <ul class="space-y-2.5"> <li> <a href="/industries#manufacturing" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> Manufacturing (Discrete &amp; Process) </a> </li><li> <a href="/industries#retail" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> Retail &amp; Omnichannel Commerce </a> </li><li> <a href="/industries#distribution" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> Distribution &amp; Logistics </a> </li><li> <a href="/industries#supply-chain" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> Supply Chain &amp; Warehousing </a> </li><li> <a href="/industries#wholesale" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> Wholesale Trade </a> </li><li> <a href="/industries#professional-services" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> Professional Services &amp; PSA </a> </li> </ul> </div> <!-- Technical Knowledge / Blog --> <div> <h3 class="text-sm font-semibold tracking-wider text-white uppercase font-display mb-4">Technical Hub</h3> <ul class="space-y-2.5"> <li> <a href="/blog?category=D365+F%26O" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> D365 F&amp;O Architecture </a> </li><li> <a href="/blog?category=X%2B%2B+Development" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> X++ Development Patterns </a> </li><li> <a href="/blog?category=Data+Management" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> Data Management Framework </a> </li><li> <a href="/blog?category=Integrations" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> Azure &amp; Dual-Write Integrations </a> </li><li> <a href="/blog?category=Performance+Optimization" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> SQL &amp; Batch Performance </a> </li><li> <a href="/blog?category=Production+Support" class="text-sm text-slate-400 hover:text-white hover:underline transition-colors"> Production Support Playbooks </a> </li> <li class="pt-2"> <a href="/blog" class="text-xs font-semibold text-primary-300 hover:text-primary-200 flex items-center gap-1"> <span>View All 8 Technical Guides</span> <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path> </svg> </a> </li> </ul> </div> </div> <!-- Bottom Copyright & Legal Disclaimer --> <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500"> <div class="space-y-1 text-center md:text-left"> <p>© 2026 D365 Mastery. All rights reserved.</p> <p class="text-[11px] text-slate-500">
+Microsoft Dynamics 365, Azure, and Microsoft Power Platform are trademarks of Microsoft Corporation. D365 Mastery is an independent consulting practice.
+</p> </div> <div class="flex items-center gap-6"> <a href="/about" class="hover:text-slate-300 transition-colors">About Us</a> <a href="/contact" class="hover:text-slate-300 transition-colors">Contact</a> <a href="/sitemap-index.xml" class="hover:text-slate-300 transition-colors">Sitemap</a> </div> </div> </div> </footer> </body></html>  

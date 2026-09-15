@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page Not Found | D365 Mastery"
+  description="The page you are looking for does not exist. Explore our D365 F&O services, industry solutions, and technical guides."
+>
+  <div class="min-h-[60vh] flex items-center justify-center py-20 px-4">
+    <div class="text-center max-w-lg mx-auto">
+      <span class="text-xs font-mono font-bold text-primary bg-primary-50 px-3 py-1 rounded-full border border-primary/20 uppercase tracking-wider">
+        Error 404
+      </span>
+      <h1 class="text-4xl font-extrabold font-display text-slate-900 mt-4 mb-3">
+        Page Not Found
+      </h1>
+      <p class="text-sm text-slate-600 mb-8 leading-relaxed">
+        The requested Dynamics 365 resource or article could not be located. It may have been relocated or updated.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a
+          href="/"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white bg-primary hover:bg-primary-600 transition-colors shadow-sm"
+        >
+          Return to Homepage
+        </a>
+        <a
+          href="/services"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors"
+        >
+          Explore Services
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
