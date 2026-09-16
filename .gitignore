@@ -1,2 +1,5 @@
 
 Blogger Export/
+
+dist/
+node_modules/
