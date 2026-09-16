@@ -4,8 +4,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://manusharmaindia.github.io',
-  base: '/D365Mastery',
+  site: 'https://d365mastery.com',
+  base: '/',
   trailingSlash: 'never',
   integrations: [
     tailwind({
