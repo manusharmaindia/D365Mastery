@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import LeadCaptureCTA from '../components/LeadCaptureCTA.astro';
 import BlogCard from '../components/BlogCard.astro';
 import { getCollection } from 'astro:content';
 
@@ -9,12 +8,11 @@ const featuredPosts = allPosts
   .filter((post) => post.data.featured)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
-
 ---
 
 <BaseLayout
-  title="Dynamics 365 Finance & Operations Consulting | D365 Mastery"
-  description="D365 Mastery is a premier Microsoft Dynamics 365 Finance & Operations consulting practice helping organizations implement, optimize, modernize, integrate, and support enterprise ERP systems."
+  title="CA Manu Sharma | Dynamics 365 F&O Senior Functional Consultant"
+  description="Personal portfolio of CA Manu Sharma, Senior Functional Consultant specializing in Microsoft Dynamics 365 Finance & Operations."
   breadcrumbs={[{ name: "Home", url: "/" }]}
 >
   <!-- Hero Section -->
@@ -26,159 +24,204 @@ const featuredPosts = allPosts
         
         <!-- Live Status Pill -->
         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F3E8FF] text-[#4C1D95] text-xs font-bold mb-8 shadow-xs border border-[#E9D5FF]">
-          <span class="w-2 h-2 rounded-full bg-slate-950 animate-pulse"></span>
-          <span>Enterprise Microsoft Dynamics 365 F&amp;O Advisory</span>
+          <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+          <span>CA Manu Sharma</span>
           <span class="text-slate-700">|</span>
-          <span class="text-slate-900 font-semibold">Available Globally</span>
+          <span class="text-slate-900 font-semibold">Dynamics 365 F&amp;O Senior Functional Consultant</span>
         </div>
 
         <!-- Headline -->
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-display tracking-tight text-slate-950 leading-[1.15] text-balance mb-6">
-          Dynamics 365 Finance &amp; Operations Consulting That <span class="text-[#1E3A5F] underline decoration-[#6D28D9] decoration-4 underline-offset-4">Delivers Results</span>
+          Architecting Robust Solutions in <span class="text-[#1E3A5F] underline decoration-[#6D28D9] decoration-4 underline-offset-4">Dynamics 365 F&amp;O</span>
         </h1>
 
         <!-- Subheadline -->
         <p class="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto mb-10 font-normal">
-          Helping organizations successfully implement, optimize, modernize, support and scale Microsoft Dynamics 365 Finance &amp; Operations with hands-on technical architecture and zero corporate fluff.
+          I am a passionate Dynamics 365 Finance &amp; Operations professional specializing in end-to-end implementation, financial blueprinting, and complex data migration. I share technical insights to help the community master the Microsoft ecosystem.
         </p>
 
         <!-- Hero CTAs -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <a
-            href="/contact"
+            href="https://www.linkedin.com/in/camanusharma/"
+            target="_blank"
+            rel="noopener noreferrer"
             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-bold text-white bg-[#6D28D9] hover:bg-[#4C1D95] active:bg-[#3B0764] border border-[#4C1D95] shadow-md shadow-[#6D28D9]/30 transition-all duration-200 transform hover:-translate-y-0.5"
           >
-            <span>Schedule Consultation</span>
-            <svg class="w-5 h-5 stroke-[2.2]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            <span>Connect on LinkedIn</span>
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6c0-.88-.72-1.6-1.6-1.6z"/>
             </svg>
           </a>
 
-        </div>
-
-        <!-- 4 Core Trust Indicators -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-10 border-t border-slate-200/80 text-left">
-          <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/90 shadow-xs hover:border-[#6D28D9] transition-colors">
-            <div class="w-8 h-8 rounded-lg bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center font-bold text-sm mb-2 shadow-2xs">
-              <svg class="w-4 h-4 stroke-[2.2]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-            </div>
-            <div class="text-sm font-bold text-slate-900">D365 Expertise</div>
-            <div class="text-xs text-slate-500 mt-0.5">Finance, SCM, WMS, Retail</div>
-          </div>
-
-          <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/90 shadow-xs hover:border-[#6D28D9] transition-colors">
-            <div class="w-8 h-8 rounded-lg bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center font-bold text-sm mb-2 shadow-2xs">
-              <svg class="w-4 h-4 stroke-[2.2]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
-            </div>
-            <div class="text-sm font-bold text-slate-900">Architecture Experience</div>
-            <div class="text-xs text-slate-500 mt-0.5">Scalable Multi-Org Design</div>
-          </div>
-
-          <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/90 shadow-xs hover:border-[#6D28D9] transition-colors">
-            <div class="w-8 h-8 rounded-lg bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center font-bold text-sm mb-2 shadow-2xs">
-              <svg class="w-4 h-4 stroke-[2.2]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-              </svg>
-            </div>
-            <div class="text-sm font-bold text-slate-900">Development Expertise</div>
-            <div class="text-xs text-slate-500 mt-0.5">Clean X++, CoC &amp; SysOps</div>
-          </div>
-
-          <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/90 shadow-xs hover:border-[#6D28D9] transition-colors">
-            <div class="w-8 h-8 rounded-lg bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center font-bold text-sm mb-2 shadow-2xs">
-              <svg class="w-4 h-4 stroke-[2.2]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <div class="text-sm font-bold text-slate-900">Production Support</div>
-            <div class="text-xs text-slate-500 mt-0.5">Sev-1 Triage &amp; 24/7 SLA</div>
-          </div>
+          <a
+            href="/contact"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-bold text-slate-900 bg-white hover:bg-slate-50 border border-slate-300 hover:border-slate-400 shadow-xs transition-all duration-200"
+          >
+            <span>Send a Message</span>
+            <svg class="w-5 h-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </a>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Value Proposition Section -->
-  <section class="py-20 bg-white">
+  <!-- Technical Profile & Certifications Section -->
+  <section class="py-20 bg-slate-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold font-display">Technical Expertise &amp; Certifications</h2>
+        <p class="text-slate-400 mt-3 max-w-2xl mx-auto">A blend of financial auditing background and enterprise ERP systems engineering.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Certifications -->
+        <div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700/80">
+          <h3 class="text-xl font-bold font-display mb-6 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+            </div>
+            Certifications
+          </h3>
+          <ul class="space-y-4 text-sm text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-0.5">✓</span>
+              <span><strong>Microsoft Dynamics 365 ERP (MB – 920)</strong></span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-0.5">✓</span>
+              <span><strong>Microsoft Generative AI Career Essentials</strong> (LinkedIn Certification)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-0.5">✓</span>
+              <span><strong>MS Office Advance Excel</strong> (LinkedIn Certification)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-0.5">✓</span>
+              <span><strong>Basics of Power BI &amp; SQL</strong> (LinkedIn Certification)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700/80">
+          <h3 class="text-xl font-bold font-display mb-6 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+            </div>
+            Core Competencies
+          </h3>
+          <ul class="space-y-4 text-sm text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-0.5">✓</span>
+              <span><strong>D365 F&O Modules:</strong> General Ledger, Asset Lease, Cash and Bank, Fixed Assets, Credit &amp; Collections, Inventory Postings, Tax, PMA.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-0.5">✓</span>
+              <span><strong>Architecture &amp; Tools:</strong> Azure DevOps Experience, Data Management Workspace (DMF).</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-0.5">✓</span>
+              <span><strong>Technical Solutions:</strong> Experience in Technical Customizations Solution Design and FDD Preparations.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary mt-0.5">✓</span>
+              <span><strong>AI &amp; Automation:</strong> CO Pilot Agents with D365 FO MCP Server.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Experience Timeline -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold font-display text-slate-900">Professional Experience</h2>
+        <div class="w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
         
-        <div class="lg:col-span-5 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 border border-primary/20 text-xs font-bold text-primary">
-            <span>Why Enterprise Leaders Choose Us</span>
+        <!-- E&Y LLP -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-100 text-slate-500 shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-primary group-hover:text-white group-hover:border-primary/30 transition-colors z-10">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
           </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold font-display tracking-tight text-slate-900">
-            Enterprise ERP Without The Bloat of Big SI Firms
-          </h2>
-          <p class="text-base text-slate-600 leading-relaxed">
-            Traditional global system integrators staff D365 projects with bloated teams and inexperienced junior developers learning on your budget.
-          </p>
-          <p class="text-base text-slate-600 leading-relaxed">
-            At <strong>D365 Mastery</strong>, you partner directly with senior architects who write production X++, engineer high-volume Azure integrations, and resolve database deadlocks hands-on.
-          </p>
-
-          <div class="pt-2 space-y-3 text-sm text-slate-700">
-            <div class="flex items-center gap-3">
-              <span class="w-5 h-5 rounded-full bg-accent/20 text-accent flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Direct access to Senior Solution Architects from day one</span>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-card transition-shadow">
+            <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
+              <h3 class="font-bold text-lg text-slate-900">E&amp;Y LLP, Noida</h3>
+              <span class="text-xs font-semibold text-primary bg-primary-50 px-2.5 py-1 rounded-full whitespace-nowrap mt-2 sm:mt-0">Nov 2025 – Present</span>
             </div>
-            <div class="flex items-center gap-3">
-              <span class="w-5 h-5 rounded-full bg-accent/20 text-accent flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Zero overlayering, 100% upgrade-proof extension code</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <span class="w-5 h-5 rounded-full bg-accent/20 text-accent flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Cost-effective global delivery model with India hub</span>
-            </div>
-          </div>
-
-          <div class="pt-4">
-            <a href="/about" class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-primary-700">
-              <span>Read About Our Architecture Philosophy</span>
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
+            <h4 class="text-sm font-semibold text-slate-700 mb-4">Senior Functional Consultant | Dynamics 365 F&amp;O</h4>
+            <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+              <li>Independently handling Finance modules: General Ledger, Asset Lease, Cash &amp; Bank, Fixed Assets, Credit and Collections, Inventory Postings, Tax, and Management Reporting.</li>
+              <li>Requirement Gathering for Finance Modules (Multi GAAP reporting) and Invoice Capture Feature (OCR Based), Project Management &amp; Accounting (PMA).</li>
+              <li>Led Data Management and Bank payments integration (HSBC).</li>
+              <li>Performed Testing of Customizations, FDD Preparations, CRP sessions, and On-site user training.</li>
+            </ul>
           </div>
         </div>
 
-        <!-- Metric & Tech Architecture Highlights Box -->
-        <div class="lg:col-span-7 bg-slate-900 rounded-3xl p-8 sm:p-10 text-white shadow-2xl border border-slate-800 relative overflow-hidden">
-          <div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
-
-          <h3 class="text-xl font-bold font-display text-white mb-6">
-            D365 Mastery Engineering Pillars
-          </h3>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700/80">
-              <div class="text-2xl font-bold text-accent font-display">100%</div>
-              <div class="text-sm font-semibold text-white mt-1">One Version Compliant</div>
-              <div class="text-xs text-slate-400 mt-1">Extension-first architecture with strict CoC patterns that survive monthly Microsoft service updates.</div>
+        <!-- Alfazance India -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-100 text-slate-500 shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-primary group-hover:text-white group-hover:border-primary/30 transition-colors z-10">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+          </div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-card transition-shadow">
+            <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
+              <h3 class="font-bold text-lg text-slate-900">Alfazance India Private Limited, Noida</h3>
+              <span class="text-xs font-medium text-slate-500 mt-2 sm:mt-0 whitespace-nowrap">Feb 2024 – Oct 2025</span>
             </div>
+            <h4 class="text-sm font-semibold text-slate-700 mb-4">Associate Functional Consultant | Dynamics 365 F&amp;O</h4>
+            <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+              <li>Led configurations for Tax Modules across projects in Oman and the Philippines, and Indian Tax Localizations (GST, TDS/TCS).</li>
+              <li>Prepared FRMD and conducted Requirement Gathering for Finance and SCM modules (Food Processing).</li>
+              <li>Customized reports (Clear Tax integration API, Fixed Asset Roll forward) and designed Workflows.</li>
+              <li>Imported various masters and transactions using Data Management Workspace (DMF).</li>
+              <li>Developed Management Reporter dashboards for P&amp;L, Balance Sheet, and Trial Balance.</li>
+            </ul>
+          </div>
+        </div>
 
-            <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700/80">
-              <div class="text-2xl font-bold text-primary font-display">&lt; 15 Min</div>
-              <div class="text-sm font-semibold text-white mt-1">Sev-1 Incident Triage</div>
-              <div class="text-xs text-slate-400 mt-1">Rapid root cause analysis across Azure SQL telemetry, LCS activity logs, and AOS worker pools.</div>
+        <!-- KPMG -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-100 text-slate-500 shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-primary group-hover:text-white group-hover:border-primary/30 transition-colors z-10">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+          </div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-card transition-shadow">
+            <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
+              <h3 class="font-bold text-lg text-slate-900">KPMG Global Delivery Centre, Bangalore</h3>
+              <span class="text-xs font-medium text-slate-500 mt-2 sm:mt-0 whitespace-nowrap">June 2023 - Feb 2024</span>
             </div>
+            <h4 class="text-sm font-semibold text-slate-700 mb-4">Audit Associate 2</h4>
+            <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+              <li>Supported US audit engagement teams in routine audit work and documentation.</li>
+              <li>Vouching and verifications of different invoices with contracts received.</li>
+              <li><strong>Award:</strong> Received the Super Team Award for outstanding contribution.</li>
+            </ul>
+          </div>
+        </div>
 
-            <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700/80">
-              <div class="text-2xl font-bold text-accent font-display">25k+ / sec</div>
-              <div class="text-sm font-semibold text-white mt-1">DMF Set-Based Records</div>
-              <div class="text-xs text-slate-400 mt-1">Engineered data migration and package entities designed for zero-downtime cutovers.</div>
+        <!-- Vijay Kumar Jain & Co -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-100 text-slate-500 shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-primary group-hover:text-white group-hover:border-primary/30 transition-colors z-10">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-card transition-shadow">
+            <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
+              <h3 class="font-bold text-lg text-slate-900">Vijay Kumar Jain &amp; Co, Meerut</h3>
+              <span class="text-xs font-medium text-slate-500 mt-2 sm:mt-0 whitespace-nowrap">Aug 2018 - Aug 2021</span>
             </div>
-
-            <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700/80">
-              <div class="text-2xl font-bold text-primary font-display">24/7</div>
-              <div class="text-sm font-semibold text-white mt-1">Global Coverage</div>
-              <div class="text-xs text-slate-400 mt-1">Seamless time-zone overlap across North America, UK/Europe, India, and Australia.</div>
-            </div>
+            <h4 class="text-sm font-semibold text-slate-700 mb-4">Audit / Articled Assistant</h4>
+            <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+              <li>Performed statutory and internal audits for various private, public companies, and banks.</li>
+              <li>Handled the preparation and filing of 350+ tax forms such as ITR 1-7 and GSTR-1/3B/9/9C.</li>
+            </ul>
           </div>
         </div>
 
@@ -186,21 +229,59 @@ const featuredPosts = allPosts
     </div>
   </section>
 
+  <!-- Education Section -->
+  <section class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold font-display text-slate-900">Education</h2>
+      </div>
 
+      <div class="overflow-hidden bg-white rounded-2xl border border-slate-200 shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="min-w-full divide-y divide-slate-200">
+            <thead class="bg-slate-50">
+              <tr>
+                <th scope="col" class="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Degree</th>
+                <th scope="col" class="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Board / Institute</th>
+                <th scope="col" class="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Percent</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">CA Final</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Institute of Chartered Accountants of India (ICAI)</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-semibold">62.38%</td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">MCOM</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">CCSU</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-semibold">63.20%</td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">Class XII</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">CBSE, Rishabh Academy</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-semibold">82.80%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Featured Blog Section -->
-  <section class="py-20 bg-slate-50/70 border-t border-slate-200/80">
+  <section class="py-20 bg-white border-t border-slate-200/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
         <div>
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 border border-primary/20 text-xs font-bold text-primary mb-3">
-            <span>D365 Thought Leadership</span>
+            <span>Knowledge Sharing</span>
           </div>
           <h2 class="text-3xl sm:text-4xl font-extrabold font-display tracking-tight text-slate-900">
             Latest Technical Insights &amp; Architecture Guides
           </h2>
           <p class="text-base text-slate-600 mt-2">
-            In-depth guides on DMF, X++ clean code, Azure integrations, and performance tuning from senior architects.
+            In-depth guides on DMF, X++ clean code, Azure integrations, and performance tuning.
           </p>
         </div>
         <div>
@@ -229,14 +310,4 @@ const featuredPosts = allPosts
       </div>
     </div>
   </section>
-
-  <!-- Conversion CTA Banner -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <LeadCaptureCTA
-      headline="Ready to Modernize, Optimize, or Scale Your D365 F&O Environment?"
-      subheadline="Speak directly with an enterprise Dynamics 365 Finance & Operations Principal Architect. Honest evaluations, zero junior bloat, and predictable delivery."
-      primaryCtaText="Book Architecture Consultation"
-      primaryCtaLink="/contact"
-    />
-  </div>
 </BaseLayout>
